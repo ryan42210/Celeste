@@ -1,6 +1,7 @@
 #include <iostream>
 #include "render_viewport.h"
 #include "volume.h"
+#include "camera.h"
 
 int main() {
   ImgConfig img_config(1920, 1080);

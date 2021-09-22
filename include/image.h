@@ -13,6 +13,6 @@ class Image {
   ImgConfig img_config_;
 };
 
-using Image3 = Image<3>;
+using Image3f = Image<3>;
 
 #endif //CELESTE_INCLUDE_IMAGE_H_

@@ -9,4 +9,5 @@ using vec3i = nanovdb::Vec3i;
 
 using Ray = nanovdb::Ray<float>;
 
+static constexpr float PI = 3.141592653579f;
 #endif //CELESTE_INCLUDE_CORE_H_
