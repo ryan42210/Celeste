@@ -19,8 +19,7 @@ bool ViewPort::Initialize(const ImgConfig& img_config) {
   if (initialized_) return false;
   img_config_.width = img_config.width;
   img_config_.height = img_config.height;
-  img_config_.ch_num = img_config.ch_num;
-  frame_buffer_.resize(img_config_.width * img_config_.height * img_config_.ch_num, 0.1f);
+  frame_buffer_.resize(img_config_.width * img_config_.height * CH_NUM, 0.1f);
   glfwInit();
   glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
   p_window_ = glfwCreateWindow(img_config_.width, img_config_.height, "Celeste", NULL, NULL);
