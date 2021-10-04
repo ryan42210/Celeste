@@ -1,6 +1,12 @@
 #include "camera.h"
 // #include <cmath>
 
+// Camera::Camera(ImgConfig img_config) {
+//   SetImgConfig(img_config);
+//   CamConfig cam_config;
+//   SetCamConfig(cam_config);
+// }
+
 void Camera::SetCamConfig(const CamConfig &config) {
   focal_len_ = config.focal_len;
   fov_ = config.fov;
@@ -12,7 +18,6 @@ void Camera::SetCamConfig(const CamConfig &config) {
 }
 
 void Camera::SetImgConfig(const ImgConfig &config) {
-  img_config_.ch_num = config.ch_num;
   img_config_.width = config.width;
   img_config_.height = config.height;
   img_plane_w_ = focal_len_ * tanf(fov_ * PI / 360) * config.aspect_ratio;

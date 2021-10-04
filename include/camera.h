@@ -7,7 +7,7 @@
 class Camera {
  public:
   Camera() = default;
-  Camera(ImgConfig img_config);
+  // Camera(ImgConfig img_config);
   void SetCamConfig(const CamConfig &config);
   void SetImgConfig(const ImgConfig &config);
   Ray GenerateRay(float x, float y);
