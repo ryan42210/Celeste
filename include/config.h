@@ -11,7 +11,7 @@ struct ImgConfig {
   ImgConfig(int x, int y) {
     width = x;
     height = y;
-    aspect_ratio = static_cast<float>(width)/height;
+    aspect_ratio = static_cast<float>(width)/static_cast<float>(height);
   }
   ImgConfig(const ImgConfig& img_config) {
     this->width = img_config.width;

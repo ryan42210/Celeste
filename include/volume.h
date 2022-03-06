@@ -7,10 +7,13 @@
 class Volume {
   using BufferT = nanovdb::HostBuffer;
  public:
-  Volume(std::string vdb_path);
-  vec3f& LookUp(const vec3f &p);
-  vec3f& Sample();
-  vec3f& Tr();
+  explicit Volume(const std::string &vdb_path);
+  vec3f LookUp(const vec3f &p) const;
+  vec3f Sample() const;
+  vec3f Tr() const;
+
+  Ray GridToWorld(const Ray &grid_ray) const;
+  Ray WorldToGrid(const Ray &world_ray) const;
  private:
   std::shared_ptr<nanovdb::GridHandle<BufferT>> p_nano_grid_;
   float sigma_s_;
